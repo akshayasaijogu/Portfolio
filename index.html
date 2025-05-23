@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Akshaya Sai Jogu - Portfolio</title>
+  <style>
+    :root {
+      --bg: #f5f5f5;
+      --text: #111;
+      --primary: #333;
+      --accent: #555;
+      --card-bg: #fff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121212;
+        --text: #eee;
+        --primary: #fff;
+        --accent: #aaa;
+        --card-bg: #1e1e1e;
+      }
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+
+    /* Top header bar */
+    header.topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      background-color: var(--card-bg);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header.topbar h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--primary);
+      cursor: default;
+    }
+    nav.topnav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      font-weight: 600;
+    }
+    nav.topnav ul li a {
+      text-decoration: none;
+      color: var(--primary);
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+    nav.topnav ul li a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    /* Hero section */
+    section.hero {
+      text-align: center;
+      padding: 50px 20px 40px;
+    }
+    section.hero img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--primary);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      margin-bottom: 15px;
+    }
+    section.hero h2 {
+      font-size: 2.5rem;
+      margin: 0 0 8px;
+    }
+    section.hero p.headline {
+      font-weight: 500;
+      font-size: 1.2rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+    a.resume-btn {
+      display: inline-block;
+      padding: 12px 28px;
+      font-weight: 600;
+      color: #fff;
+      background-color: var(--primary);
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    a.resume-btn:hover {
+      background-color: var(--accent);
+    }
+
+    /* Container for main content */
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 50px;
+    }
+    section h2 {
+      font-size: 1.7rem;
+      /* Removed border bottom */
+      padding-bottom: 0;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      line-height: 1.7;
+    }
+    .certification-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+   }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid var(--accent);
+      padding: 15px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    .contact-links a {
+      margin-right: 15px;
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: var(--primary);
+    }
+    .contact-links a:hover {
+      color: var(--accent);
+    }
+    @media (max-width: 600px) {
+      nav.topnav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: right;
+      }
+    }
+    section {
+  margin-bottom: 50px;
+  background-color: var(--card-bg);
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+}
+
+  </style>
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+
+  <!-- Top Header Bar -->
+  <header class="topbar">
+    <h1>Akshaya</h1>
+    <nav class="topnav">
+      <ul>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="profilephoto.jpg" alt="Akshaya Sai Jogu" />
+    <h2>Akshaya Sai Jogu</h2>
+    <p class="headline">Aspiring Data Analyst | SNIST</p>
+    <a href="Akshaya_Jogu_Resume.pdf" class="resume-btn" target="_blank">View Resume</a>
+    <p class="summary" style="max-width: 600px; margin: 20px auto 0;">
+      B.Tech IT student with a passion for AI, Data Science, and Intelligent systems. Strong foundation in ML, Analytics, and Real-Time Dashboards with hands-on project experience in Tableau, Streamlit, and LLMs.
+    </p>
+  </section>
+
+  <div class="container">
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>B.Tech in Information Technology</strong> — Sreenidhi Institute of Science and Technology, 2022–26 — GPA: 8.75</li>
+        <li><strong>Intermediate (MPC)</strong> — Narayana Junior College — 95%</li>
+        <li><strong>SSC</strong> — Narayana Olympiad School — GPA: 10.0</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+  <h2>Skills</h2>
+  <div class="project-grid">
+    <div class="project-card">
+      <strong>Python</strong>
+    </div>
+    <div class="project-card">
+      <strong>SQL</strong>
+    </div>
+    <div class="project-card">
+      <strong>Java</strong>
+    </div>
+    <div class="project-card">
+      <strong>Git</strong>
+    </div>
+    <div class="project-card">
+      <strong>DSA</strong>
+    </div>
+    <div class="project-card">
+      <strong>Tableau</strong>
+    </div>
+    <div class="project-card">
+      <strong>Excel</strong>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <h2>Certifications</h2>
+  <div class="certification-list">
+    <div class="project-card">
+      <strong>Gen AI with LLMs - May 2025</strong>
+    </div>
+    <div class="project-card">
+      <strong>SQL for Data Science - Apr 2024</strong>
+    </div>
+    <div class="project-card">
+      <strong>AWS Data Engineering - Sep 2024</strong>
+    </div>
+    <div class="project-card">
+      <strong>Accenture Data Viz Simulation - May 2024</strong>
+    </div>
+    <div class="project-card">
+      <strong>Tableau Dashboards & Essentials - Mar 2025</strong>
+    </div>
+    <div class="project-card">
+      <strong>Excel Dashboards - May 2025</strong>
+    </div>
+  </div>
+</section>
+
+
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <strong>Student Academic Data Management Using Apache Druid</strong>
+            <p>Designed a scalable academic data processing system that ingests, aggregates, and analyzes student records from CSV files using Apache Druid. The dashboard provides real-time insights on CGPA, subject-wise performance, and semester progress, enabling quick decision-making for faculty and students.</p>
+        </div>
+
+        <div class="project-card">
+          <strong>Natural Language to SQL Conversion Using LLMs</strong>
+          <p>Built a web interface powered by pre-trained LLMs to translate natural English queries into valid SQL statements for easy data access. This simplifies the way users interact with databases, eliminating the need for SQL knowledge while maintaining accuracy and control over data queries.</p>
+        </div>
+
+        <div class="project-card">
+          <strong>Job Market Analysis Dashboard</strong>
+          <p>Analyzed job market datasets to uncover key patterns and opportunities in the field of data science across different cities and skill sets. Built an interactive Tableau dashboard to display trends in job roles, location-based salary variations, and in-demand tools & technologies.</p>
+        </div>
+
+        <div class="project-card">
+          <strong>Heart Disease Prediction</strong>
+          <p>Developed a Streamlit-based application that predicts the risk of heart disease using trained classification models based on medical data inputs. The app includes visual feedback, probability charts, and lifestyle improvement suggestions, making it a useful diagnostic aid for preliminary screening.</p>
+        </div>
+
+        <div class="project-card">
+          <strong>Customer Segmentation</strong>
+          <p>Performed unsupervised machine learning using K-Means clustering to segment customers based on features like annual income and spending score. This analysis helps businesses personalize marketing campaigns by identifying key customer groups such as loyal, high-value, and budget-conscious buyers.</p>
+        </div>
+
+        <div class="project-card">
+          <strong>Celebrity Face Detection</strong>
+          <p>Created a face recognition application that uses Haar cascade classifiers and wavelet features to detect and classify celebrity faces from uploaded images. Users can upload images through a Streamlit interface, and the app matches them against a trained ML model for accurate identification.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+  <h3>Get to Know More</h3>
+  <div class="contact-links">
+    <a href="mailto:akshayasaijogu@gmail.com" title="Email" target="_blank" style="font-size: 2.2rem;"><i class="fas fa-envelope"></i></a>
+    <a href="https://www.linkedin.com/in/akshayasai-jogu-95a4602a0" title="LinkedIn" target="_blank" style="font-size: 2.2rem;"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/akshayasaijogu" title="GitHub" target="_blank" style="font-size: 2.2rem;"><i class="fab fa-github"></i></a>
+  </div>
+</section>
+  </div>
+
+  <script>
+  if ('scrollBehavior' in document.documentElement.style === false) {
+    import('https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js').then(() => {
+      window.__forceSmoothScrollPolyfill__ && window.__forceSmoothScrollPolyfill__();
+    });
+  }
+</script>
+
+
+</body>
+</html>
